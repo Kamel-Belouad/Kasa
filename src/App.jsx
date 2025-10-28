@@ -1,15 +1,20 @@
-
 import './App.css'
+import { NotFound } from './pages/404'
+import { Apropos } from './pages/Apropos'
+import { Home } from './Pages/Home'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+const router = createBrowserRouter([
+  
+  { path: "/", element: <Home /> },
+  { path: "/home", element: <Home />,},  
+  { path: "/apropos", element: <Apropos /> },
+  { path: "/location/:id", element: <Location /> },
+  { path: "*", element: <NotFound /> },
+]);
 
 function App() {
- 
-
-  return (
-    <>
-    <h1> agence kasa</h1>
-
-    </>
-  )
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export { App };
