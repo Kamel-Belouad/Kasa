@@ -1,9 +1,14 @@
+import seaImage from "../assets/img/sea-image.png"
 
 
-export const Home = ()=>{
+
+export function Home(){
+    
     return <>
-   
-    <h1>page Home</h1>
- 
+        <div>
+            <img src={seaImage} alt="first image"/>
+            <div>Chez vous, partout et ailleurs</div>
+        </div>
+        
     </>
 }
