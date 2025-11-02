@@ -1,0 +1,16 @@
+.image-apropos {
+    position: relative; 
+    width: 1240px;
+    height: 223px;
+    overflow: hidden;
+    border-radius: 25px;
+    margin: 20px auto;
+
+  }
+  .image-apropos img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+}
