@@ -12,12 +12,12 @@ export function Home(){
         
         {locations.map((location) => {
             return  (
-         
+            <Link to={`/location/${location.id}`}>                         
                 <div>
                     <img src={location?.pictures[0]} alt="" />
                     <div>{location.title}</div>
                 </div>
-           
+            </Link>
             )
         })}
        

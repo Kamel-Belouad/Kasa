@@ -2,7 +2,8 @@ import './App.css'
 import { Root } from './components/Root'
 import { NotFound } from './pages/404'
 import { Apropos } from './pages/Apropos'
-import { Home } from './Pages/Home'
+import { Home } from './pages/Home'
+import { Location } from './Pages/Location'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 const router = createBrowserRouter([

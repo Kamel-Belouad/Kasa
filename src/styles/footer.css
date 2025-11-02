@@ -1,0 +1,27 @@
+.footer{
+    background-color: black;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    text-align: center;
+  }
+  .footer-content{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-direction: column;
+  }
+  .logo-footer {
+    filter: grayscale(1) brightness(100); 
+    width: 100px;
+    height: auto;
+  }
+  .footer-text{
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+  }
+  .footer-text i {
+    margin-right: 5px;
+    font-size: 18px;
+  }

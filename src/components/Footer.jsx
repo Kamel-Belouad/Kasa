@@ -1,10 +1,12 @@
 import logo from "../assets/logo.png"
+import "../styles/footer.css"
+
 export const Footer = ()=>{
     return (
-    <footer>
-        <div>
-            <img src={logo}  alt="footer"/>
-            <p><i className="fa-regular fa-copyright"></i>2020 Kasa. All rights reserved</p>
+    <footer className="footer">
+        <div className="footer-content">
+            <img src={logo} className="logo-footer" alt="footer"/>
+            <p className="footer-text"><i className="fa-regular fa-copyright"></i>2020 Kasa. All rights reserved</p>
         </div>
     </footer> 
     )
