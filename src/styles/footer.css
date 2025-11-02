@@ -1,9 +1,16 @@
-.footer{
-    background-color: black;
-    padding-top: 50px;
-    padding-bottom: 25px;
-    text-align: center;
-  }
+.footer {
+  background-color: black;
+  width: 100%;
+  width: 1440px;
+  height: 209px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%); 
+}
   .footer-content{
     display: flex;
     gap: 20px;
