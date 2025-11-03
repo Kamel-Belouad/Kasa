@@ -1,0 +1,43 @@
+.error-page {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 63px 0;
+    padding: 0;
+}
+.error-container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px; 
+}
+.error-code {
+  width: 597px;
+  height: 263px;
+  margin: 0 auto; 
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 288px;
+  line-height: 143%;
+  color: #ff6f6f;
+  letter-spacing: 0;
+  text-align: center;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  opacity: 1;
+} 
+.error-message {
+  width: 872px;
+  height: 51px;
+  margin: 20px auto; 
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  color: #ff6f6f;
+}
+.error-link {
+    font-size: 18px;
+    color: black; 
+    text-decoration: underline; 
+    cursor: pointer; 
+    font-weight: 600; 
+} 
