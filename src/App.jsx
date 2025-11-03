@@ -1,6 +1,6 @@
 import './App.css'
 import { Root } from './components/Root'
-import { NotFound } from './pages/404'
+import { ErrorPage } from './pages/404'
 import { Apropos } from './pages/Apropos'
 import { Home } from './pages/Home'
 import { Location } from './Pages/Location'
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
   ],
   },
   
-  { path: "*", element: <NotFound /> },
+  { path: "*", element: <ErrorPage/> },
 ]);
 
 function App() {
