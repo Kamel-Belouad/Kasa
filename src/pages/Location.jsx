@@ -1,6 +1,7 @@
 import { useParams, Navigate } from "react-router-dom";
 import { PropertiesApi } from "../Api/PropertiesApi";
 import { Collapse } from "../components/Collapse";
+import { Star } from "../components/Star";
 
 export const Location = () => {
     const { id } = useParams();
@@ -34,7 +35,13 @@ export const Location = () => {
                   </span>
                 ))} 
             </div>
+            <div>
+                {Array.from({ length: 5 }, (_, i) => (
+                <Star key={i} selected={i < parseInt(location?.rating)} />
+                ))}
+              </div>
         </div>
+        
 
 
         <div >
