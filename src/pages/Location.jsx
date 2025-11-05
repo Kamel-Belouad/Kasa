@@ -1,5 +1,6 @@
 import { useParams, Navigate } from "react-router-dom";
 import { PropertiesApi } from "../Api/PropertiesApi";
+import { Collapse } from "../components/Collapse";
 
 export const Location = () => {
     const { id } = useParams();
@@ -33,6 +34,22 @@ export const Location = () => {
                   </span>
                 ))} 
             </div>
+        </div>
+
+
+        <div >
+              <Collapse title="Description">
+                <p>{location?.description}</p>
+              </Collapse>
+              <Collapse title="Équipements">
+                <div>
+                  <ul>
+                    {location?.equipments?.map((equip, index) => (
+                      <li key={index}>{equip}</li>
+                    ))}
+                  </ul>
+                </div>
+              </Collapse>
         </div>
     
     </div>
