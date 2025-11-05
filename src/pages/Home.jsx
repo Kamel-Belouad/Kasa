@@ -1,5 +1,5 @@
 import seaImage from "../assets/img/sea-image.png"
-import { PropertiesApi } from "../api/PropertiesApi"
+import { PropertiesApi } from "../Api/PropertiesApi";
 import { Link } from "react-router-dom";
 import "../styles/home.css"
 
