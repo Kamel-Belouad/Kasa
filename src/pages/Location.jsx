@@ -2,6 +2,7 @@ import { useParams, Navigate } from "react-router-dom";
 import { PropertiesApi } from "../Api/PropertiesApi";
 import { Collapse } from "../components/Collapse";
 import { Star } from "../components/Star";
+import { Slider } from "../components/Slider";
 
 export const Location = () => {
     const { id } = useParams();
@@ -13,6 +14,10 @@ export const Location = () => {
 
   return (
     <div>
+      {location?.pictures?.length > 0 && (
+        <Slider slides={location.pictures} />
+)}
+        
         <h1>{location?.title}</h1>
 
         <div>
