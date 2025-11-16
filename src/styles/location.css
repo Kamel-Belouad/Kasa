@@ -1,0 +1,264 @@
+/* --- GLOBAL --- */
+body {
+    margin: 0;
+    padding: 0 100px;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* --- CONTAINER PRINCIPAL --- */
+.buttons-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.buttons-section .dropdown {
+    width: 100%;
+}
+
+.collapse-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* --- SLIDER --- */
+.image-section {
+    position: relative;
+    width: 100%;
+}
+
+.carroussel-box > img {
+    object-fit: cover;
+    height: 415px;
+    width: 100%;
+    border-radius: 25px;
+}
+
+/* --- FLÈCHES --- */
+.left-arrow,
+.right-arrow {
+    position: absolute;
+    cursor: pointer;
+    -webkit-filter: saturate(0) brightness(0) invert(100%) opacity(1);
+    filter: saturate(0) brightness(0) invert(100%) opacity(1);
+    user-select: none;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left-arrow {
+    left: 25px;
+    width: 46px;
+    height: 79px;
+}
+
+.right-arrow {
+    right: 25px;
+    width: 46px;
+    height: 79px;
+}
+
+/* --- BULLET POINT --- */
+.bulletPoint {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    z-index: 2;
+}
+
+/* --- DETAILS SECTION --- */
+.property-container {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.details-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* ----- Desktop header ----- */
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.top-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.property-title {
+    color: #ff6060;
+    font-size: 36px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.property-location {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+}
+
+/* --- TAGS --- */
+.tags-rating {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background-color: #ff6060;
+    color: white;
+    border-radius: 10px;
+    padding: 5px 25px;
+    font-size: 14px;
+}
+
+/* --- AUTHOR --- */
+.author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profil {
+    color: #ff6060;
+    text-align: right;
+    font-size: 18px;
+    margin: 0;
+    line-height: 20px;
+}
+
+.avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+/* Desktop author */
+.author-desktop {
+    display: flex;
+}
+
+/* Mobile author hidden by default on desktop */
+.mobile-author {
+    display: none;
+}
+
+/* --- RATING --- */
+.rating {
+    display: flex;
+    gap: 5px;
+    font-size: 22px;
+    color: #ff6060;
+}
+
+/* MOBILE: Rating + author */
+.rating-author-wrapper {
+    display: none; /* hidden on desktop */
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+
+    body {
+        padding: 0 20px;
+    }
+    .header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .author-desktop {
+        display: none;
+    }
+
+    .rating-author-wrapper {
+        display: flex;
+    }
+
+    .mobile-author {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 10px;
+    }
+
+    .property-title {
+        font-size: 24px;
+    }
+
+    .property-location {
+        font-size: 14px;
+    }
+
+    .buttons-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .carroussel-box > img {
+        height: 255px;
+        border-radius: 10px;
+    }
+
+    .left-arrow,
+    .right-arrow {
+        width: 24px;
+        height: 24px;
+        top: 116px;
+        transform: translateY(0);
+    }
+
+    .bulletPoint {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .property-title {
+        font-size: 18px;
+    }
+
+    .profil {
+        font-size: 14px;
+    }
+
+    .avatar {
+        width: 32px;
+        height: 32px;
+    }
+
+    .buttons-section {
+        gap: 15px;
+    }
+
+    .carroussel-box > img {
+        height: 200px;
+    }
+}

@@ -1,78 +1,53 @@
+body{
+    margin: 0;
+    padding: 10px 100px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+/* --- Image --- */
 .image-apropos {
-    position: relative; 
-    width: 1240px;
-    height: 223px;
-    overflow: hidden;
-    border-radius: 25px;
-    margin: 20px auto;
-}
-
-.image-apropos img{
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(60%);
-}
-
-.collapse-container {
-  display: flex;
-  flex-direction: column; /* Flow vertical */
-  gap: 30px;              /* espace entre chaque collapse */
-  width: 1023px;          /* largeur fixe comme sur la maquette */
-  margin: 40px auto;      /* centre horizontalement */
-  position: relative;
-}
-
-.collapse {
-  position: relative; /* parent pour positionner le content */
-}
-
-.collapse-header {
-  padding: 15px 20px 10px 15px; /* padding Figma */
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  background-color: #ff5c5c;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 5px; 
-  position: relative;
-  z-index: 2; /* toujours au-dessus du content */
-}
-
-.collapse-content {
-  max-height: 0;
+  width: 100%;
+  max-width: 1240px;
+  height: 223px;
+  margin: 20px auto;
+  border-radius: 15px;
   overflow: hidden;
-  padding: 0px 5px 0px 25px;
-  opacity: 0;
-  transform: translateY(-20px); /* commence légèrement au-dessus */
-  transition: max-height 0.4s ease-out, opacity 0.3s ease-out, transform 0.4s ease-out, padding 0.3s ease-out;
-  text-align: left;
-  background-color: #F6F6F6;
-  border-radius: 5px;
-  font-size: 20px;
+  position: relative;
 }
 
-.collapse.open .collapse-content {
-  max-height: 1000px; /* assez grand pour le texte le plus long */
-  opacity: 1;
-  transform: translateY(0); /* tombe depuis le haut */
-  transition: max-height 0.6s ease-in, opacity 0.4s ease-in, transform 0.4s ease-in, padding 0.4s ease-in;
-  padding: 1px 25px; /* padding quand ouvert */
+.image-apropos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
 }
 
-
-.dropdown-arrow {
-  width: 32px;
-  height: 32px;
-  transform: rotate(0deg);         
-  transform-origin: center;
-  transition: transform 0.4s ease; 
+/* --- Collapse Container --- */
+.collapse-container {
+  max-width: 1023px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;  
 }
 
-.collapse.open .dropdown-arrow {
-  transform: rotate(-180deg);       
+/* --- Responsive --- */
+@media screen and (max-width: 768px) {
+  .image-apropos {
+    height: 180px;
+  }
+  .collapse-container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .image-apropos {
+    height: 111px;
+  }
+  .collapse-container {
+    width: 95%;
+  }
 }

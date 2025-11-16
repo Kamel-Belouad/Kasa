@@ -1,69 +1,107 @@
-import { useParams, Navigate } from "react-router-dom";
-import { PropertiesApi } from "../Api/PropertiesApi";
-import { Collapse } from "../components/Collapse";
-import { Star } from "../components/Star";
-import { Slider } from "../components/Slider";
+import { useParams } from "react-router-dom";
+import { Collapse } from "../Components/Collapse";
+import { PropertiesApiById } from "../Api/PropertiesApiById";
+import { Navigate } from "react-router-dom";
+import { Slider } from "../Components/Slider";
+import { Star } from "../Components/Star";
+import '../styles/location.css';
+
+const createArray = length => [...Array(length)];
+const parseToInt = s => parseInt(s);
 
 export const Location = () => {
-    const { id } = useParams();
-    const properties = PropertiesApi(); 
-      const location = properties.find(p => p.id === id); // cherche la propriété correspondant à l'id
-       
-        if (!properties.length) return <p>Chargement...</p>; // si les données pas encore chargées
-        if (!location) return <Navigate to="/ErrorPage" />;
+    const locationRouteParam = useParams();
+    const location = PropertiesApiById(locationRouteParam.id);
 
-  return (
-    <div>
-      {location?.pictures?.length > 0 && (
-        <Slider slides={location.pictures} />
-)}
-        
-        <h1>{location?.title}</h1>
+    if (!location) {
+        return <Navigate to="/ErrorPage" />;
+    }
 
-        <div>
-            <p>
-                {location?.host?.name.split(" ")[0]}<br />
-                {location?.host?.name.split(" ")[1]}
-            </p>
-            <div>
-                  <img src={location?.host?.picture}
-                    alt={"Photo of " + location?.host?.name}/>
-                 
-            </div>
-        </div>
-        <p>{location?.location}</p>
-        <div>
-            <div>
-               {location?.tags?.map((tag, index) => (
-                  <span key={index}>
-                    {tag}
-                  </span>
-                ))} 
-            </div>
-            <div>
-                {Array.from({ length: 5 }, (_, i) => (
-                <Star key={i} selected={i < parseInt(location?.rating)} />
-                ))}
-              </div>
-        </div>
-        
+    return (
+        <>
+            <div className="property-container">
 
+                {location?.pictures && <Slider slides={location?.pictures} />}
 
-        <div >
-              <Collapse title="Description">
-                <p>{location?.description}</p>
-              </Collapse>
-              <Collapse title="Équipements">
-                <div>
-                  <ul>
-                    {location?.equipments?.map((equip, index) => (
-                      <li key={index}>{equip}</li>
-                    ))}
-                  </ul>
+                <div className="details-section">
+
+                    {/* ----- Desktop HEADER ----- */}
+                    <div className="header-row">
+                        <div className="top-left">
+                            <h1 className="property-title">{location?.title}</h1>
+                            <p className="property-location">{location?.location}</p>
+                        </div>
+
+                        <div className="author author-desktop">
+                            <p className="profil">
+                                {location?.host?.name.split(" ")[0]}<br />
+                                {location?.host?.name.split(" ")[1]}
+                            </p>
+                            <div className="author-avatar">
+                                <img
+                                    className="avatar"
+                                    src={location?.host?.picture}
+                                    alt={location?.host?.name}
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* ----- MOBILE Rating + Author ----- */}
+                    <div className="tags-rating">
+                        <div className="tags">
+                            {location?.tags?.map((tag, index) => (
+                                <span className="tag" key={index}>{tag}</span>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="rating-author-wrapper">
+                        <div className="rating">
+                            {createArray(5).map((_, i) => (
+                                <Star
+                                    key={i}
+                                    selected={parseToInt(location?.rating) > i}
+                                />
+                            ))}
+                        </div>
+
+                        <div className="author mobile-author">
+                            <p className="profil">
+                                {location?.host?.name.split(" ")[0]}<br />
+                                {location?.host?.name.split(" ")[1]}
+                            </p>
+                            <div className="author-avatar">
+                                <img
+                                    className="avatar"
+                                    src={location?.host?.picture}
+                                    alt={location?.host?.name}
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* -------- COLLAPSE SECTION -------- */}
+                    <div className="buttons-section">
+                        <div className="collapse-wrapper">
+                            <Collapse title="Description">
+                                <p>{location?.description}</p>
+                            </Collapse>
+                        </div>
+
+                        <div className="collapse-wrapper">
+                            <Collapse title="Équipements">
+                                <ul>
+                                    {location?.equipments?.map((equip, i) => (
+                                        <li key={i}>{equip}</li>
+                                    ))}
+                                </ul>
+                            </Collapse>
+                        </div>
+                    </div>
+
                 </div>
-              </Collapse>
-        </div>
-    
-    </div>
-  );
+            </div>
+        </>
+    );
 };

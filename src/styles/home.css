@@ -30,7 +30,7 @@
     background-size: cover;
     width: 340px;
     height: 340px;
-    border-radius: 15px;
+    border-radius: 10px;
   }
 .title-card{
     position: absolute;
@@ -51,9 +51,9 @@
 .locations-container{
     background-color:#F6F6F6;
     display: grid;
-    grid-template-columns: repeat(3, 340px); /* exactement 3 colonnes */
+    grid-template-columns: repeat(3, 340px); 
     gap: 60px;
-    justify-content: center; /* espace gauche/droite égal */
+    justify-content: center; 
     max-width: 1240px;
     margin: 50px auto;
     padding: 60px;

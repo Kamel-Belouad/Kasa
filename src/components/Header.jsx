@@ -8,7 +8,7 @@ export const Header = ()=>{
     <img className="logo" src={logo} alt="logo"/>
         <nav className="nav-list">
         <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>Accueil</NavLink>
-        <NavLink to="/apropos" className={({ isActive }) => (isActive ? 'active' : '')}>A propos</NavLink>
+        <NavLink to="/apropos" className={({ isActive }) => (isActive ? 'active' : '')}>À propos</NavLink>
         </nav>
     </header>
     )
