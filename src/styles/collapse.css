@@ -57,6 +57,9 @@
 
 /* Responsive */
 @media screen and (max-width: 768px) {
+  .collapse-container {
+    width: 100%;
+  }
   .dropdown-title {
     padding: 12px 15px;
   }

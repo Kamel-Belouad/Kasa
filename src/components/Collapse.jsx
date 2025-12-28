@@ -6,7 +6,7 @@ export function Collapse(props){
         setActive(!active)
     };
     return (
-        <div className={`dropdown ${props.className} ${active ? "open" : ""}`}>
+        <div className={`dropdown ${props.className ?? ""} ${active ? "open" : ""}`}>
             <div className="dropdown-title" onClick={switchOpen}>
                 <div className="dropdown-header">{props.title}</div>
                     <span className="dropdown-arrow-wrapper">

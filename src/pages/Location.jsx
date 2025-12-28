@@ -48,7 +48,8 @@ export const Location = () => {
                     </div>
 
                     {/* ----- MOBILE Rating + Author ----- */}
-                    <div className="tags-rating">
+                    <div className="rating-details">
+                                            <div className="tags-rating">
                         <div className="tags">
                             {location?.tags?.map((tag, index) => (
                                 <span className="tag" key={index}>{tag}</span>
@@ -80,6 +81,8 @@ export const Location = () => {
                             </div>
                         </div>
                     </div>
+                    </div>
+
 
                     {/* -------- COLLAPSE SECTION -------- */}
                     <div className="buttons-section">

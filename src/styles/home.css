@@ -1,21 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
 .image-container {
-    position: relative; 
+    position: relative;
     width: 1240px;
+    max-width: 100%;
     height: 223px;
     overflow: hidden;
     border-radius: 25px;
     margin: 20px auto;
-  }
-.image-container img{
+}
+
+.image-container img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
     filter: brightness(40%);
-  }
-.text-overlay{
-    font-family: 'Montserrat', sans-serif;
+}
+
+.text-overlay {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -24,21 +27,51 @@
     font-size: 40px;
     font-weight: 700;
     text-align: center;
-    z-index: 2;
-  }  
-.image-card{
-    background-size: cover;
+  
+}
+
+/* --- LOCATIONS CONTAINER --- */
+.locations-container {
+    display: grid;
+    grid-template-columns: repeat(3, 340px); 
+    gap: 60px;
+    justify-content: center;
+    max-width: 1240px;
+    margin: 50px auto;
+    padding: 60px;
+    border-radius: 25px;
+    background-color: #F6F6F6; 
+    box-sizing: border-box;
+}
+
+/* --- CARTES --- */
+.location-card {
+    position: relative;
     width: 340px;
     height: 340px;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+}
+
+.image-card {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 10px;
-  }
-.title-card{
+}
+
+.title-card {
     position: absolute;
     bottom: 16px;
     left: 16px;
     right: 16px;
-    padding: 12px ;
-    background: rgba(0, 0, 0, 0.3);
+    padding: 12px;
+    background: rgba(0,0,0,0.3);
     border-radius: 8px;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
@@ -47,29 +80,39 @@
     overflow: hidden;
     text-overflow: ellipsis;
     z-index: 2;
-  }
-.locations-container{
-    background-color:#F6F6F6;
-    display: grid;
-    grid-template-columns: repeat(3, 340px); 
-    gap: 60px;
-    justify-content: center; 
-    max-width: 1240px;
-    margin: 50px auto;
-    padding: 60px;
-    border-radius: 25px;
-    box-sizing: border-box;
-  }
-  .location-card{
-    position: relative; 
-    width: 340px;
-    height: 340px;
-    color: white;
-    background: linear-gradient(to bottom, #FF6F6F, #FF5C5C);
-    display: flex;
-    align-items: flex-end;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    font-weight: bold;
-    font-size: 18px;
-  }  
+}
+
+
+@media screen and (max-width: 768px) {
+    .locations-container {
+        grid-template-columns: 1fr; 
+        gap: 40px;
+        padding: 5px;
+        background-color: transparent; 
+        justify-content: center;
+    }
+
+    .location-card {
+        width: 100%;
+        aspect-ratio: 1; 
+        background: none; 
+    }
+    .image-container {
+        width:100%;
+        height: 122px;
+        border-radius: 10px;   
+    }
+    .text-overlay {
+        left: 16px;          
+        top: 31px;          
+        transform: none;    
+        width: 225px;       
+        height: 48px;       
+        font-size: 24px;
+        line-height: 100%;     
+        text-align: left;
+        
+       
+    }
+}
+

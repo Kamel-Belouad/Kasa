@@ -1,7 +1,6 @@
 .footer {
   background-color: black;
   width: 100%;
-  width: 1440px;
   height: 209px;
   text-align: center;
   display: flex;
@@ -32,3 +31,22 @@
     margin-right: 5px;
     font-size: 18px;
   }
+  @media screen and (max-width: 768px) {
+    .footer{
+      width: 375px;
+      height: 209px;
+    }
+    .logo-footer {
+      width: 122px;
+      height: 39.44px;
+  }
+    .footer-text{
+      width: 133px;
+      height: 46px;
+      font-size: 12px;
+
+    }
+    .footer-text i{
+      font-size: x-small;
+    }
+}
