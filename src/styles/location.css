@@ -24,11 +24,6 @@ body {
     width: 100%;
     
 }
-.dropdown.open,
-.dropdown.open .dropdown-header,
-.dropdown.open .dropdown-menu {
-    border-radius: 10px;
-}
 
 /* --- SLIDER --- */
 .image-section {

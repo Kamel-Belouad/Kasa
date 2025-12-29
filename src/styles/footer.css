@@ -18,13 +18,12 @@
   }
   .logo-footer {
     filter: grayscale(1) brightness(100); 
-    width: 100px;
-    height: auto;
+    width: 122px;
+    height: 40px;
   }
   .footer-text{
     color: white;
     font-size: 24px;
-    font-weight: 500;
     margin: 0;
   }
   .footer-text i {
@@ -38,7 +37,7 @@
     }
     .logo-footer {
       width: 122px;
-      height: 39.44px;
+      height: 40px;
   }
     .footer-text{
       width: 133px;

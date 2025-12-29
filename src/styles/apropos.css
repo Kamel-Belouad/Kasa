@@ -1,9 +1,4 @@
-body{
-    margin: 0;
-    padding: 10px 100px;
-    max-width: 1440px;
-    margin: 0 auto;
-  }
+
 
 /* --- Image --- */
 .image-apropos {
@@ -13,14 +8,14 @@ body{
   margin: 20px auto;
   border-radius: 15px;
   overflow: hidden;
-  position: relative;
+  
 }
 
 .image-apropos img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(60%);
+  filter: brightness(70%);
 }
 
 /* --- Collapse Container --- */
@@ -36,7 +31,8 @@ body{
 /* --- Responsive --- */
 @media screen and (max-width: 768px) {
   .image-apropos {
-    height: 180px;
+    height: 111px;
+    border-radius: 10px;
   }
   .collapse-container {
     width: 90%;
