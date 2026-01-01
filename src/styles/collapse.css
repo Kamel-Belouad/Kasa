@@ -81,5 +81,8 @@
   .dropdown-arrow {
     font-size: 16px;
   }
+  .dropdown-content{
+    font-size: 12px;
+  }
 }
 
