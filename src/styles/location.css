@@ -95,11 +95,10 @@
 
 .property-title {
     color: #ff6060;
-    font-size: 36px;
+    font-size: clamp(18px, 3vw, 36px);
     font-weight: 500;
     margin: 0;
-    line-height: 143%;
-    height: 51px;
+   
 }
 
 .property-location {
@@ -194,7 +193,7 @@
 
 
 /* --- RESPONSIVE --- */
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 768px) {
 
     body {
         padding: 0 20px;
@@ -245,7 +244,7 @@
 
     .carroussel-box > img {
         height: 255px;
-        width: 335px;
+        width: 100%;
         border-radius: 10px;
     }
    .left-arrow,

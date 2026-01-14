@@ -1,124 +1,150 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 
+/* ========================= IMAGE HEADER / HERO ========================= */
 .image-container {
-    position: relative;
-    width: 1240px;
-    max-width: 100%;
-    height: 223px;
-    overflow: hidden;
-    border-radius: 25px;
-    margin: 20px auto;
+  position: relative;
+  width: 1240px;
+  max-width: 100%;
+  height: 223px;
+  overflow: hidden;
+  border-radius: 25px;
+  margin: 20px auto;
 }
 
 .image-container img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(40%);
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(40%);
 }
 
 .text-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 40px;
-    font-weight: 700;
-    text-align: center;
-  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
 }
 
-/* --- LOCATIONS CONTAINER --- */
+/* ========================= LOCATIONS CONTAINER ========================= */
 .locations-container {
-    display: grid;
-    grid-template-columns: repeat(3, 340px); 
-    gap: 60px;
-    justify-content: center;
-    max-width: 1240px;
-    margin: 50px auto;
-    padding: 60px;
-    border-radius: 25px;
-    background-color: #F6F6F6; 
-    box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 4vw, 60px);
+  max-width: 1240px;
+  margin: 50px auto;
+  padding: clamp(20px, 4vw, 60px);
+  border-radius: 25px;
+  background-color: #F6F6F6;
+  box-sizing: border-box;
 }
 
-/* --- CARTES --- */
+/* ========================= CARDS ========================= */
 .location-card {
-    position: relative;
-    width: 340px;
-    height: 340px;
-    display: flex;
-    align-items: flex-end;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    font-weight: bold;
-    font-size: 18px;
-    color: white;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* carré responsive */
+  display: flex;
+  align-items: flex-end;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-weight: bold;
+  color: white;
+  position: relative;
 }
 
 .image-card {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .title-card {
-    position: absolute;
-    bottom: 16px;
-    left: 16px;
-    right: 16px;
-    padding: 12px;
-    background: rgba(0,0,0,0.3);
-    border-radius: 8px;
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    z-index: 2;
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  padding: 12px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 2;
 }
 
+/* ========================= MEDIA QUERIES ========================= */
 
+/* Tablet */
+@media screen and  (max-width: 768px) {
+  .locations-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 5px;
+    background-color: transparent;
+    justify-content: center;
+    margin-top: -5px;
+    margin-bottom: 15px;
+  }
+  .body {
+    padding: 10px;
+  }
+
+}
+
+/* Mobile ≤ 420px */
 @media screen and (max-width: 420px) {
-    .locations-container {
-        grid-template-columns: 1fr; 
-        gap: 20px;
-        padding: 5px;
-        background-color: transparent; 
-        justify-content: center;
-        margin-top: -5px;
-        margin-bottom: 15px;
-    }
+  .locations-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;
+    background-color: transparent;
+    justify-content: center;
+    margin-top: -5px;
+    margin-bottom: 15px;
+  }
+  
 
-    .location-card {
-        width: 100%;
-        height: 100%;
-        aspect-ratio: 1; 
-        background: none; 
-    }
-    .image-container {
-        width:100%;
-        height: 122px;
-        border-radius: 10px;   
-        margin-bottom: 20px;
-    }
-    .text-overlay {
-        left: 16px;          
-        top: 31px;          
-        transform: none;    
-        width: 225px;       
-        height: 48px;       
-        font-size: 24px;
-        line-height: 100%;     
-        text-align: left;  
-    }
-    .removeUnderLine{
-        width: 335px;
-        height: 255px;
-    }
+  .location-card {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
+    background: none;
+  }
+
+  .image-container {
+    width: 100%;
+    height: 122px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .text-overlay {
+    left: 16px;
+    top: 31px;
+    transform: none;
+    width: 225px;
+    height: 48px;
+    font-size: 24px;
+    line-height: 100%;
+    text-align: left;
+  }
+
+ .removeUnderLine {
+    width: 100%;
+    max-width: 335px;
+    aspect-ratio: 335 / 255;
+  }
 }
+
+
+
+
 
