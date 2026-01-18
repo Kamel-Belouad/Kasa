@@ -1,55 +1,60 @@
 .error-page {
     text-align: center;
-    font-family: Arial, sans-serif;
-    margin: 63px 0;
-    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    margin: 60px 0 100px 0; 
 }
+
 .error-container {
     display: flex;
     flex-direction: column;
     gap: 80px; 
+    align-items: center;
+    justify-content: center;
 }
+
 .error-code {
-  width: 597px;
-  height: 263px;
-  margin: 0 auto; 
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 288px;
-  line-height: 143%;
-  color: #ff6f6f;
-  letter-spacing: 0;
-  text-align: center;
-  display: flex;
-  align-items: center; 
-  justify-content: center; 
-  opacity: 1;
-} 
+    font-weight: 700;
+    font-size: clamp(60px, 26vw, 288px);
+    color: #ff6f6f;
+    margin: 0; 
+    line-height: 1;
+    max-width: 100%;
+}
+
 .error-message {
-  width: 872px;
-  height: 51px;
-  margin: 20px auto; 
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  font-size: 36px;
-  color: #ff6f6f;
+    font-weight: 500;
+    font-size: 36px;
+    color: #ff6f6f;
+    margin: 0; 
 }
+
 .error-link {
+    font-weight: 600;
     font-size: 18px;
-    color: black; 
-    text-decoration: underline; 
-    cursor: pointer; 
-    font-weight: 600; 
-} 
-@media screen and (max-width: 768px){
-.error-container h1{
-  font-size: 100px;
-  width: 100%;
-}
-.error-container p{
-  font-size: 24px;
-  width: 100%;
-}
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+    margin: 0; 
 }
 
+/* Tablette */
+@media screen and (max-width: 1024px) {
+   
+    .error-message {
+        font-size: 24px;
+    }
+    .error-link {
+        font-size: 18px;
+    }
+}
 
+/* Mobile */
+@media screen and (max-width: 480px) {
+  
+    .error-message {
+        font-size: 18px;
+    }
+    .error-link {
+        font-size: 14px;
+    }
+}
