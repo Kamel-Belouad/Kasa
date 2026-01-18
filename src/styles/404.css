@@ -1,13 +1,13 @@
 .error-page {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    margin: 60px 0 100px 0; 
+    margin: 100px 0 120px 0; 
 }
 
 .error-container {
     display: flex;
     flex-direction: column;
-    gap: 80px; 
+    gap: 120px; 
     align-items: center;
     justify-content: center;
 }
@@ -53,8 +53,15 @@
   
     .error-message {
         font-size: 18px;
+        text-align: center;
+        line-height: 143%;
     }
     .error-link {
         font-size: 14px;
+    }
+}
+@media screen and (min-width: 481px) {
+    .line-break {
+        display: none; 
     }
 }
