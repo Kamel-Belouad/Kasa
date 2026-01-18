@@ -139,7 +139,6 @@
 
  .removeUnderLine {
     width: 100%;
-    max-width: 335px;
     aspect-ratio: 335 / 255;
   }
 }

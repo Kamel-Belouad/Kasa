@@ -68,6 +68,17 @@ nav a.active {
    
     
   }
-
-
+@media screen and (max-width: 370px){
+  .nav-list a {
+    font-size: 9px;   
+  }
+    .logo {
+    display: block; 
+    width: 130px; 
+    height: 46px; 
+  }
 }
+  
+}
+
+
