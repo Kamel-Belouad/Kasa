@@ -68,17 +68,35 @@ nav a.active {
    
     
   }
-@media screen and (max-width: 370px){
+  }
+@media screen and (max-width: 340px) {
+
+  /* HEADER : on réduit les marges */
+  .header {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  /* LOGO : fluide */
+  .logo {
+    width: clamp(30px, 36vw, 145px);
+    height: auto;
+  }
+
+  /* TEXTE NAV : fluide */
   .nav-list a {
-    font-size: 9px;   
+    font-size: clamp(7px, 3vw, 12px);
+    white-space: nowrap;
+    height: auto;
   }
-    .logo {
-    display: block; 
-    width: 130px; 
-    height: 46px; 
+
+  /* ESPACEMENT NAV */
+  .nav-list {
+    gap: clamp(8px, 5vw, 26px);
   }
 }
+
   
-}
+
 
 

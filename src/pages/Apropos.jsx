@@ -2,7 +2,7 @@ import mountain from "../assets/img/mountain.png";
 import "../styles/apropos.css";
 import "../styles/collapse.css";
 
-import { Collapse } from "../Components/Collapse";
+import { Collapse } from "../components/Collapse";
 
 
 export const Apropos = () => {
