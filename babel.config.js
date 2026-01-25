@@ -1,3 +1,7 @@
+// babel.config.js
 export default {
-  presets: ["@babel/preset-env", "@babel/preset-react"],
+  presets: [
+    ["@babel/preset-react", { runtime: "automatic" }],
+    "@babel/preset-env",
+  ],
 };

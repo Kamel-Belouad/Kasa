@@ -3,7 +3,7 @@ import { Collapse } from "../components/Collapse";
 import { PropertiesApiById } from "../Api/PropertiesApiById";
 import { Navigate } from "react-router-dom";
 import { Slider } from "../Components/Slider";
-import { Star } from "../Components/Star";
+import { Star } from "../components/Star";
 import '../styles/location.css';
 
 const createArray = length => [...Array(length)];
