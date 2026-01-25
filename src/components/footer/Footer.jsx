@@ -1,5 +1,5 @@
-import logo from "../assets/img/logo.png"
-import "../styles/footer.css"
+import logo from "../../assets/img/logo.png";
+import "../../styles/footer.css";
 
 export const Footer = ()=>{
     return (
