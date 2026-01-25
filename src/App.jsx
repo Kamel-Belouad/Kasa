@@ -1,5 +1,5 @@
 import './App.css'
-import { Root } from './components/Root'
+import { Root } from './components/root/Root'
 import { ErrorPage } from './pages/404'
 import { Apropos } from './pages/Apropos'
 import { Home } from './pages/Home'
