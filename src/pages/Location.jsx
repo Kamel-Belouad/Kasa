@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { Collapse } from "../components/Collapse";
+import { Collapse } from "../components/collapse/Collapse";
 import { PropertiesApiById } from "../Api/PropertiesApiById";
 import { Navigate } from "react-router-dom";
 import { Slider } from "../Components/Slider";
