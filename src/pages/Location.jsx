@@ -2,8 +2,8 @@ import { useParams } from "react-router-dom";
 import { Collapse } from "../components/collapse/Collapse";
 import { PropertiesApiById } from "../Api/PropertiesApiById";
 import { Navigate } from "react-router-dom";
-import { Slider } from "../Components/Slider";
-import { Star } from "../components/Star";
+import { Slider } from "../components/slider/Slider";
+import { Star } from "../components/star/Star";
 import '../styles/location.css';
 
 const createArray = length => [...Array(length)];
@@ -22,6 +22,7 @@ export const Location = () => {
             <div className="property-container">
 
                 {location?.pictures && <Slider slides={location?.pictures} />}
+            <div/>
 
                 <div className="details-section">
 
@@ -30,7 +31,7 @@ export const Location = () => {
                         <div className="top-left">
                             <h1 className="property-title">{location?.title}</h1>
                             <p className="property-location">{location?.location}</p>
-                        </div>
+                </div>
 
                         <div className="author author-desktop">
                             <p className="profil">
