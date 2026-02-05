@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen,fireEvent } from "@testing-library/react";
 import { Slider } from "./Slider";
 
 describe("Slider", () => {
@@ -36,5 +36,33 @@ describe("Slider", () => {
 
         expect(screen.getByText("1/3")).toBeInTheDocument();
 });
+test("clic sur right arrow et affichage de l'image suivante ", () =>{
+    const slides = ["img1.jpg", "img2.jpg", "img3.jpg"];
+       
+        render(
+        <Slider slides={slides} />
+    );
 
-})
+    expect(screen.getByText("1/3")).toBeInTheDocument();
+
+    const rightArrow = screen.getByAltText("right-arrow");
+    fireEvent.click(rightArrow);
+    expect(screen.getByText("2/3")).toBeInTheDocument();
+
+    
+});
+test("clic sur left arrow et affichage de l'image précédene", () => {
+    const slides = ["img1.jpg", "img2.jpg", "img3.jpg"];
+    render(
+        <Slider slides={slides} />
+    );
+    expect(screen.getByText("1/3")).toBeInTheDocument();
+
+    const leftArrow = screen.getByAltText("left arrow");
+    fireEvent.click(leftArrow);
+    expect(screen.getByText("3/3")).toBeInTheDocument();
+
+});
+
+
+});
