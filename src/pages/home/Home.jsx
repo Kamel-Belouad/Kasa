@@ -1,7 +1,7 @@
-import seaImage from "../assets/img/sea-image.png"
-import { PropertiesApi } from "../Api/PropertiesApi";
+import seaImage from "../../assets/img/sea-image.png"
+import { PropertiesApi } from "../../Api/PropertiesApi";
 import { Link } from "react-router-dom";
-import "../styles/home.css"
+import "../../styles/home.css"
 
 export function Home(){
     const locations = PropertiesApi();
