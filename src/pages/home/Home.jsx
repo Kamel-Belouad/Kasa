@@ -18,7 +18,7 @@ export function Home(){
             <Link key={location.id} to={`/location/${location.id}`} className="removeUnderLine">                         
                 <div className="location-card">
               
-                    <img className="image-card" src={location?.pictures[0]} alt="" />
+                    <img className="image-card" src={location?.pictures[0]} alt= {location.title}/>
                     <div className="title-card">{location.title}</div>
                
                 </div>

@@ -24,5 +24,25 @@ describe ("Home Page", () => {
         const firstImageText = screen.getByText(/Chez vous, partout et ailleurs/i);
         expect (firstImageText).toBeInTheDocument();
     });
+    test("affichage des cartes image+titre", () => {
+        render (
+            <MemoryRouter>
+                <Home />
+            </MemoryRouter>
+        );
+        const links = screen.getAllByRole("link");
+        expect(links).toHaveLength(3);
+
+        const image = screen.getByAltText("Location 1");
+        expect(image).toHaveAttribute("src", "pic1.jpg");
+
+
+        const title = screen.getByText("Location 1");
+        expect(title).toBeInTheDocument();
+
+
+      
+
+    });
 
 });
