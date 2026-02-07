@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
+import { MemoryRouter, Routes, Route } from "react-router-dom";
+import userEvent from "@testing-library/user-event";
 import { Home } from "./Home";
 
 jest.mock("../../Api/PropertiesApi", () => ({
@@ -39,10 +40,24 @@ describe ("Home Page", () => {
 
         const title = screen.getByText("Location 1");
         expect(title).toBeInTheDocument();
+    });
+    test("VERIFIER SI LE CLIC SUR UNE CARTE MENE BIEN A LA PAGE DE LA LOCATION", async () => {
+        render(
+        <MemoryRouter initialEntries={["/"]}>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/location/:id" element ={<div>Page de Location</div>}/>
+                </Routes>
+        </MemoryRouter>
+        );
 
+        const cardLocation1 = screen.getByText("Location 1").closest("a");
+        expect (cardLocation1).toBeInTheDocument();
 
-      
+        await userEvent.click(cardLocation1);
 
+        const locationPage = screen.getByText("Page de Location");
+        expect (locationPage).toBeInTheDocument();
     });
 
 });
