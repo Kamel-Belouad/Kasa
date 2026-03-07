@@ -72,7 +72,7 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
 }
 
 .details-section {
@@ -194,10 +194,6 @@
 
 /* --- RESPONSIVE --- */
 @media screen and (max-width: 768px) {
-
-    body {
-        padding: 0 20px;
-    }
    .property-container {
     margin: 20px auto 0 auto; 
     gap: 5px;

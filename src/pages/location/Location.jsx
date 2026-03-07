@@ -1,17 +1,17 @@
 import { useParams } from "react-router-dom";
 import { Collapse } from "../../components/collapse/Collapse";
-import { PropertiesApiById } from "../../Api/PropertiesApiById";
+import { usePropertiesApiById } from "../../Api/PropertiesApiById";
 import { Navigate } from "react-router-dom";
 import { Slider } from "../../components/slider/Slider";
 import { Star } from "../../components/star/Star";
-import '../../styles/location.css';
+import '../../pages/location/location.css';
 
 const createArray = length => [...Array(length)];
 const parseToInt = s => parseInt(s);
 
 export const Location = () => {
     const { id } = useParams();
-    const location = PropertiesApiById(id);
+    const location = usePropertiesApiById(id);
 
 
     if (!location) {
@@ -51,13 +51,13 @@ export const Location = () => {
 
                     {/* ----- MOBILE Rating + Author ----- */}
                     <div className="rating-details">
-                                            <div className="tags-rating">
-                        <div className="tags">
+                        <div className="tags-rating">
+                            <div className="tags">
                             {location?.tags?.map((tag, index) => (
-                                <span className="tag" key={index}>{tag}</span>
+                                <div className="tag" key={index}>{tag}</div>
                             ))}
+                            </div>
                         </div>
-                    </div>
 
                     <div className="rating-author-wrapper">
                         <div className="rating">

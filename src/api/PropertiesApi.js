@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const PropertiesApi = () => {
+export const usePropertiesApi = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     async function getData() {

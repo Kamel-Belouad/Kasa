@@ -1,6 +1,5 @@
-import React from "react";
 import { render, screen } from "@testing-library/react";
-import { Footer } from "./Footer";
+import { Footer } from "../components/footer/Footer";
 import logo from "../../assets/img/logo.png";
 
 test("Affichage du footer avec le logo et le texte", () => {

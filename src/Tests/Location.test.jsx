@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter, Routes, Route } from "react-router-dom";
-import { Location } from "./Location";
+import { Location } from "../pages/location/Location";
 
 
-jest.mock("../../Api/PropertiesApiById", () => ({
-    PropertiesApiById: jest.fn((id) => {
+jest.mock("../Api/PropertiesApiById", () => ({
+    usePropertiesApiById: jest.fn((id) => {
         if (id === "c67ab8a7") {
             return{
                 id:"c67ab8a7",

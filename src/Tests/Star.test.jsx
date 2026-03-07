@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import { Star } from "./Star";
+import { Star } from "../components/star/Star";
 
 describe("Star", () => {
 

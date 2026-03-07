@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter, Routes,Route } from "react-router-dom";
-import { Root } from "./Root";
+import { Root } from "../components/root/Root";
 
 test("Affichage du layout Root avec Header, Outlet & Footer", () => {
     render(

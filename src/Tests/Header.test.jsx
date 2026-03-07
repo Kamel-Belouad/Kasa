@@ -1,7 +1,6 @@
-import React from "react";
 import { render, screen } from "@testing-library/react";
-import { MemoryRouter, Routes, Route } from "react-router-dom";
-import { Header } from "./Header";
+import { MemoryRouter } from "react-router-dom";
+import { Header } from "../components/header/Header";
 import logo from "../../assets/img/logo.png";
 
 test("Affichage du Header avec le logo et les liens de navigation", () =>{

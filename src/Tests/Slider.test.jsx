@@ -1,5 +1,5 @@
 import { render, screen,fireEvent } from "@testing-library/react";
-import { Slider } from "./Slider";
+import { Slider } from "../components/slider/Slider";
 
 describe("Slider", () => {
     test("affiche d'une seule image sans les fleches si slides.length=1", ()  => {

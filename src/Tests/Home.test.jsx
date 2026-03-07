@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter, Routes, Route } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
-import { Home } from "./Home";
+import { Home } from "../pages/home/Home";
 
-jest.mock("../../Api/PropertiesApi", () => ({
-  PropertiesApi: jest.fn(() => [
+jest.mock("../Api/PropertiesApi", () => ({
+  usePropertiesApi: jest.fn(() => [
     { id: "1", title: "Location 1", pictures: ["pic1.jpg"] },
     { id: "2", title: "Location 2", pictures: ["pic2.jpg"] },
     { id: "3", title: "Location 3", pictures: ["pic3.jpg"] },

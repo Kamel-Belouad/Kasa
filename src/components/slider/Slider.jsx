@@ -1,6 +1,6 @@
 import Vector_D from "../../assets/img/Vector_D.png";
 import Vector_G from "../../assets/img/Vector_G.png";
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export const Slider = ({slides}) =>{
     const [current, setCurrent] = useState(0);
@@ -20,13 +20,10 @@ export const Slider = ({slides}) =>{
                     return (
                     <div key={index} className="carroussel-box">
                         {index === current && <img src={picture} className="property-image" alt="image"/>} 
-                    </div>)
+                    </div>
+                    )
                 })}
-                {/* <img
-                src={carroussel}
-                alt="Cozy Loft"
-                className="property-image"
-                /> */}
+          
                 {slides.length>1 ?<img src={Vector_D} className="right-arrow" onClick={nextSlide} alt="right-arrow" />: null}
             </div></>)
 }

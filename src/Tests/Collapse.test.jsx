@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import { Collapse } from "./Collapse";
+import { Collapse } from "../components/collapse/Collapse";
 
 const testTitle = "Description";
 const TestContent = "À seulement deux pas des Buttes Chaumont, venez découvrir Paris dans ce studio tout équipé. Entièrement équipé pour votre confort et élégamment décoré, il vous permettra de vivre comme un Parisien le temps de votre séjour.";
@@ -9,7 +9,7 @@ describe("Collapse", () => {
 
   test("affichage du titre et du contenu caché par défaut", () => {
  render(
-      <Collapse title={testTitle} initialOpen={true}>
+      <Collapse title={testTitle}>
         <div>{TestContent}</div>
       </Collapse>
     );
@@ -23,7 +23,7 @@ describe("Collapse", () => {
 
   test("ouverture et fermeture du contenu au clic", () => {
     render(
-      <Collapse title={testTitle} initialOpen={true}>
+      <Collapse title={testTitle}>
         <div>{TestContent}</div>
       </Collapse>
     );

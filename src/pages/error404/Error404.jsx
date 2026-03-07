@@ -1,7 +1,7 @@
-import { Header } from "../components/header/Header"
-import { Footer } from "../components/footer/Footer"
+import { Header } from "../../components/header/Header"
+import { Footer } from "../../components/footer/Footer"
 import { Link } from "react-router-dom"
-import "../styles/404.css"
+import "../../pages/error404/404.css"
 
 export const ErrorPage = () => {
     return (

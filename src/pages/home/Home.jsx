@@ -1,10 +1,10 @@
 import seaImage from "../../assets/img/sea-image.png"
-import { PropertiesApi } from "../../Api/PropertiesApi";
+import { usePropertiesApi } from "../../Api/PropertiesApi";
 import { Link } from "react-router-dom";
-import "../../styles/home.css"
+import "../../pages/home/home.css"
 
 export function Home(){
-    const locations = PropertiesApi();
+    const locations = usePropertiesApi();
     
     return <>
         <div className="image-container"> 
