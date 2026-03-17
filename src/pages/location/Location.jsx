@@ -7,7 +7,7 @@ import { Star } from "../../components/star/Star";
 import '../../pages/location/location.css';
 
 const createArray = length => [...Array(length)];
-const parseToInt = s => parseInt(s);
+
 
 export const Location = () => {
     const { id } = useParams();
@@ -19,7 +19,7 @@ export const Location = () => {
     }
 
     return (
-        <>
+        <div>
             <div className="property-container">
 
                 {location?.pictures && <Slider slides={location?.pictures} />}
@@ -32,7 +32,7 @@ export const Location = () => {
                         <div className="top-left">
                             <h1 className="property-title">{location?.title}</h1>
                             <p className="property-location">{location?.location}</p>
-                </div>
+                    </div>
 
                         <div className="author author-desktop">
                             <p className="profil">
@@ -64,7 +64,7 @@ export const Location = () => {
                             {createArray(5).map((_, i) => (
                                 <Star
                                     key={i}
-                                    selected={parseToInt(location?.rating) > i}
+                                    selected={parseInt(location?.rating) > i}
                                 />
                             ))}
                         </div>
@@ -107,6 +107,6 @@ export const Location = () => {
 
                 </div>
             </div>
-        </>
+        </div>
     );
 };

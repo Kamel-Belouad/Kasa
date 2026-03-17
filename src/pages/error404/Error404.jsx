@@ -5,7 +5,7 @@ import "../../pages/error404/404.css"
 
 export const ErrorPage = () => {
     return (
-        <>
+        <div>
             <Header />
             <main className="error-page">
                 <div className="error-container">
@@ -18,6 +18,6 @@ export const ErrorPage = () => {
                 </div>
             </main>
             <Footer />
-        </>
+        </div>
     )
 }

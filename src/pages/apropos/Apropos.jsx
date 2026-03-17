@@ -5,7 +5,7 @@ import "../../components/collapse/collapse.css";
 
 export const Apropos = () => {
   return (
-    <>
+    <div>
       <div className="image-apropos">
         <img src={mountain} alt="Mountain image" />
       </div>
@@ -47,6 +47,6 @@ export const Apropos = () => {
           </p>
         </Collapse>
       </div>
-    </>
-  );
-};
+    </div>
+  )
+}

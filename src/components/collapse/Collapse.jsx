@@ -12,7 +12,7 @@ export function Collapse(props){
                     <span className="dropdown-arrow-wrapper">
                         <i className="fa-solid fa-chevron-up dropdown-arrow"></i>
                     </span>            
-                </div>
+            </div>
             <div className={`dropdown-content ${active ? "active-dropdown" : ""}`}>
                 {props.children}
             </div>

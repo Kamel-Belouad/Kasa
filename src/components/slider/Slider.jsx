@@ -2,7 +2,7 @@ import Vector_D from "../../assets/img/Vector_D.png";
 import Vector_G from "../../assets/img/Vector_G.png";
 import { useState } from 'react';
 
-export const Slider = ({slides}) =>{
+export const Slider = ({slides}) => {
     const [current, setCurrent] = useState(0);
     const length = slides.length;
     const nextSlide = () => {
@@ -12,7 +12,8 @@ export const Slider = ({slides}) =>{
     const prevSlide = () => {
         setCurrent(current === 0 ? length - 1 : current - 1);
     };
-    return (<><div className="image-section">
+    return (
+            <div className="image-section">
                 {slides.length>1 ? <img  src={Vector_G} className="left-arrow" onClick={prevSlide} alt="left arrow"/>: null}
                 {slides.length>1 ?<span className="bulletPoint">{current+1}/{length}</span>: null}
                 
@@ -25,5 +26,6 @@ export const Slider = ({slides}) =>{
                 })}
           
                 {slides.length>1 ?<img src={Vector_D} className="right-arrow" onClick={nextSlide} alt="right-arrow" />: null}
-            </div></>)
+            </div>
+            )
 }
